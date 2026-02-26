@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Value Types in JS</title>
+</head>
+<body>
+    <script>
+        //js data value types >>>>>>>1. primitive  - immutable single value data type in js 
+        // string ,number , boolean , undefined , null , bigint and symbol 
+
+        // string 
+        var myname="ranjana";
+        console.log(myname);
+        // number
+
+        var mymob=9865;
+        console.log(myname+" mobile no is " +mymob);
+
+        //boolean
+         var ismarried=false;
+         console.log(myname + " is married ?" + ismarried);
+
+
+         //undefined
+         var myemail;
+         console.log(myemail);
+         console.log(typeof(myemail));  //null
+
+         //null
+         var myaddress=null;
+         console.log(myaddress);
+         console.log(typeof(myaddress));  //object
+
+
+         //BiginT
+        //  var mynum=22472946270208489846362773764678239829012;
+         var mynum=BigInt(22472946270208489846362773764678239829012);
+         console.log(mynum);
+         console.log(typeof(mynum));
+
+         //symbol 
+         var var1= Symbol("ranjana");
+         var var2=Symbol("ranjana");
+         console.log(var1==var2);
+
+         //refernce type(object) -- mutuable in memory and keep the data in key value pair 
+
+
+         //object {}, fxn(), and array []
+
+         let myinfo ={
+            name : "ranjana",
+             age :18 ,
+              ismarried: false,
+               address :"delhi-21" ,
+                branch : "cse",
+                 section : 23 
+         };
+
+        //  console.log(myinfo.name); // ek class ka object 
+         console.log(myinfo); //for whole class 
+
+
+         //object length 
+         var keys=Object.keys(myinfo);
+         console.log(keys.length);
+
+
+
+         // fxn ???  
+
+         function cal(){
+            var num1=45;
+            var num2=40;
+            var add=num1+num2;
+            console.log("addition  of two numbers is " + add );
+         }
+
+         cal();
+         
+
+         //array -- collection of any data types;
+         let studentlist=["ranjana" , "anjali" , "kiran " ,"jaadu"];
+         console.log(studentlist[0]);
+         //for differnce data types
+         let ranjana=["ranjana ", 23, false , "xyz" , "cse" ,null, 18];
+         console.log(ranjana);
+         console.log(ranjana.length);
+
+         //to iterate array member 
+         for(let i=0;i<ranjana.length;i++){
+            console.log(ranjana[i]);
+         }
+
+         for(let x in ranjana ){
+            console.log("updated way " + ranjana[x]);
+         }
+ 
+
+    </script>
+</body>
+</html>
