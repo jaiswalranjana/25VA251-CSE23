@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function -- block of codes , used or defined to perform specific task
+        //types of fxn 
+        //normal fxn : with parameters , without parameters and with default parameters
+
+        //normal fxn without parameters 
+        //diff btw arguments and parameters ----------value pass jo hoti h wo argument hoti hai 
+        function demo(){
+            console.log("hello JS ");
+        }
+        demo(); //calling
+
+        //with parameters
+        function demo1(text){
+            console.log("Hello " +text );
+        }
+
+        demo1("Ranjana");
+
+        // default parameters 
+        function add(a,b){
+            console.log("Sum is " + (a+b));
+        }
+
+        add(123,34);
+
+        function add(a,b=12){
+            console.log("Sum is " + (a+b));
+        }
+
+        add(123,34);
+
+        function add(a,b=12){
+            console.log("Sum is " + (a+b));
+        }
+        add(12);
+
+        function add(a,b=10){
+            console.log("Sum is " + (a+b));
+        }
+        add(123);
+        
+
+        // synchronous fxn 
+        function cal(){
+             function mul(x,y){
+                console.log(x*y);
+             }
+             function sub(p,r){
+                console.log(p-r);
+             }
+
+             mul(3,6);
+             sub(9,6);
+             add(3,6);
+        }
+        cal();
+
+        //anyomous fxn
+        
+        let msg=function (){
+            console.log("helllo Ranjana");
+            console.log(typeof(msg));
+        }
+
+        msg();
+
+        //short code for above fxn  arrow fxn 
+        let msg1=()=>console.log("hello ranjannnnaaa ");
+        msg1();
+
+        //arrow fxn with multiple lines and having parameters 
+        let msg2=(a,b)=>{
+            var num1=a;
+            var num2=b;
+            var result=num1/num2;
+            console.log("result is " + result);
+
+        }
+        msg2(200,10);
+
+        //iife -- immeaditae invoked fxn expression 
+        (function(){
+            console.log("hello world ");
+        })();
+
+        (msg=>console.log("hello"))();
+
+            </script>
+
+
+</body>
+</html>
