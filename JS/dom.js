@@ -9,6 +9,8 @@ function result (){
 
 
 
+
+    
     if(inputData >=18){
         alert("valid Date");
     }
